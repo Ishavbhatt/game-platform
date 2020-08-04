@@ -29,3 +29,30 @@ class Level {
     });
   }
 }
+class State {
+  constructor(level, actors, status) {
+    this.level = level;
+    this.actors = actors;
+    this.status = status;
+  }
+
+  static start(level) {
+    return new State(level, level.startActors, "playing");
+  }
+
+  get player() {
+    return this.actors.find((a) => a.type == "player");
+  }
+}
+class Vec {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  plus(other) {
+    return new Vec(this.x + other.x, this.y + other.y);
+  }
+  times(factor) {
+    return new Vec(this.x * factor, this.y * factor);
+  }
+}
