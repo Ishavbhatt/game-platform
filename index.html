@@ -3,18 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Platform</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Platform Game</title>
+    <link rel="stylesheet" href="./assets/stylesheet/style.css" />
   </head>
   <body>
-    <div id="status">Lives: <span id="lives"></span></div>
+    <centre>
+      <h1 class="heading">A Platform Game</h1>
+      <script src="./assets/scripts/level.js"></script>
+      <script src="./assets/scripts/main.js"></script>
+
+      <script>
+        // let simpleLevel = new Level(simpleLevelPlan);
+        // let display = new DOMDisplay(document.body, simpleLevel);
+        // display.syncState(State.start(simpleLevel));
+        runGame(GAME_LEVELS, DOMDisplay);
+      </script>
+    </centre>
   </body>
-
-  <script src="main.js"></script>
-
-  <script>
-    // let display = new DOMDisplay(document.body, simpleLevel);
-    // display.syncState(State.start(simpleLevel));
-    // runGame(GAME_LEVELS, DOMDisplay);
-  </script>
 </html>
